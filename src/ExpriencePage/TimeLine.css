@@ -1,0 +1,41 @@
+/* General Timeline styling */
+.MuiTimelineItem-root {
+    align-items: flex; 
+    display: flex;
+}
+
+.MuiTimelineSeparator-root {
+    display: flex;
+    flex-direction: column; /* Stack dot and connector vertically */
+    align-items: center; /* Center the dot and connector */
+    justify-content: flex-start; /* Align the connector with the content */
+}
+
+
+.MuiTimelineConnector-root {
+    background-color: #b6b6b6; 
+    height: 100%; 
+    width: 3px; 
+}
+
+/* Styling for the dots */
+.MuiTimelineDot-root {
+    margin-left: 0; 
+}
+
+/* Adjust font size and spacing for h3 and p elements */
+.MuiTimelineItem-root h3 {
+    font-size: 20px; 
+    margin: 0;  
+}
+
+.MuiTimelineItem-root p {
+    margin-top: 0.2rem; 
+    font-size: 16px; 
+}
+
+.MuiTimelineContent-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}

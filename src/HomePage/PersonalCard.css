@@ -1,0 +1,57 @@
+.image-flip-container {
+    position: relative;
+    width: 100vw;
+    height: 30vw;
+    perspective: 1000px;
+    margin-left: 10rem;
+  }
+  
+  .image-float {
+    width: 100%;
+    height: 100%;
+    animation: floatImage 4s ease-in-out infinite; /* Apply float animation to the wrapper */
+  }
+  
+  .image-flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .image-flip-container:hover .image-flip {
+    transform: rotateY(180deg); /* Flip on hover */
+  }
+  
+  .front-img, .back-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .front-img {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  
+  .back-img {
+    transform: rotateY(-180deg);
+  }
+  
+  @keyframes floatImage {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-1.4rem);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }

@@ -1,0 +1,28 @@
+.login-input {
+    border: 0.1rem solid #ccc;
+    border-radius: 0.3rem;
+    background-color: rgb(237, 242, 246);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    width: 90%;
+    max-width: 100px; /* Adjust the max-width as needed */
+}
+
+.login-button {
+    border: 0.1rem solid #ecdede;
+    border-radius: 0.3rem;
+    background-color: rgb(220, 238, 238);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    width: 90%;
+    max-width: 40px; /* Adjust the max-width as needed */
+}
+button:hover {
+    background-color: rgb(209, 219, 227);
+}
+.admin-login {
+    padding: 0.2rem;
+    font-size: 1rem;
+    color: rgb(57, 128, 215);
+    text-align: right;
+}
