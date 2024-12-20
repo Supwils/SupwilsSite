@@ -1,4 +1,3 @@
-// src/AdminLogin/AdminLogin.js
 import './AdminLogin.css';
 import React, { useState, useContext } from 'react';
 import { UserContext } from './UserContext';
@@ -8,17 +7,41 @@ const AdminLogin = ({ onLoginSuccess }) => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const { setUser } = useContext(UserContext); // Access setUser from context
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        if (username === 'supwils' && password === 'Soho7436' && 1 === 2) {
-            const user = { username };
+
+        try {
+            // Make a POST request using the fetch API to the backend login endpoint
+            const response = await fetch(`${BACKEND_URL}/auth/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            // If the response is not ok, throw an error
+            if (!response.ok) {
+                throw new Error('Invalid credentials');
+            }
+
+            const data = await response.json();
+
+            // Assuming the response contains a JWT token
+            const { token } = data;
+
+            // Store the user and token in localStorage
+            const user = { username, token };
             setUser(user);
             localStorage.setItem('user', JSON.stringify(user));
-            onLoginSuccess(user); // Call onLoginSuccess prop
-        } else {
-            
-            setError('Invalid username or password');
+
+            // Notify the parent component of successful login
+            onLoginSuccess(user);
+        } catch (err) {
+            // Handle the error
+            setError(err.message);
             setTimeout(() => {
                 setError('');
             }, 3000);

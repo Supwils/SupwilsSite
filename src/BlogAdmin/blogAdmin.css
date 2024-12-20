@@ -1,0 +1,28 @@
+.blog-admin-container{
+    padding-top: 10rem;
+    height: auto;
+}
+
+.blog-admin-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    gap: 2rem;
+}
+
+.blog-admin-header button{
+    width: 10%;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.blog-admin-header button:hover{
+    background-color: #161616;
+    color: #fff;
+}

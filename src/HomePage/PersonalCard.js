@@ -21,7 +21,7 @@ const PersonalCard = () => {
     }, []);
 
     return (
-        <div>
+        <div className='home-container'>
             <section className="home" id="home">
                 <div className="home-content">
                     <h3>{t('helloMe')}</h3>
@@ -33,7 +33,7 @@ const PersonalCard = () => {
                         <a href="https://github.com/Supwils/" target="_blank"><i class='bx bxl-github'></i></a>
                         <a href='https://space.bilibili.com/479803243' target="_blank"><i class="fa-brands fa-bilibili"></i></a>
                     </div>
-                    <a href="#" className="btn">Download CV</a>
+                    <a href="/files/HSCV_2024_SDE_Rice.pdf" target="_blank" rel="noopener noreferrer" className="btn">Download CV</a>
                 </div>
 
                 {/* <div className="home-img">

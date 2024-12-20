@@ -1,0 +1,33 @@
+.blog-card {
+    background-color: #2a2b69;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #343339;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ensure it takes full width of the grid column */
+    height: 20rem; /* Set a fixed height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left;
+}
+
+.blog-card:hover {
+    background-color: #254a5e;
+}
+
+.blog-card p{
+    font-size: 1.5rem;
+    color: #dadada;
+}
+/* 
+
+curl -X POST http://localhost:3002/posts/create-post \
+-H "Content-Type: application/json" \
+-d '{
+  "title": "My Third post a test",
+  "content": "This is the content of my first post.",
+  "author": "supwils",
+  "tags": ["AWS", "Javascript","Nginx"]
+}' 
+
+*/

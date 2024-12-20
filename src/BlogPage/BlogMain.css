@@ -1,11 +1,32 @@
 .blog-main {
     text-align: center;
-    padding: 10rem;
+    padding: 5rem 10rem 0rem 10rem;
     font-size: 2rem;
     padding-bottom: 45rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.blog-editor {
-    margin-top: 20px;
-    padding: 0% 20%;
+
+.blog-main h1{
+    font-size: 3rem;
+    text-align: left;
+    margin-left: 15rem;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 80%; /* Set a max width for the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 1.5rem;
+    }
 }

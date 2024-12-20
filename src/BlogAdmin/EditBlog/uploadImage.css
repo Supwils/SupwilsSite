@@ -1,0 +1,11 @@
+img
+{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.upload-image-container{
+    height: 100vh;
+    padding-top: 5rem;
+}

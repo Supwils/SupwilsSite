@@ -1,0 +1,52 @@
+.blog-view-container {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 5rem;
+    
+}
+
+.blog-view {
+    padding-top: 1rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transform: translateX(-2rem);
+    gap: 1rem; /* Add space between elements */
+    
+}
+
+.blog-view h2, .blog-view p, .blog-view a {
+    margin: 0.5rem 0; /* Add margin to each element */
+}
+
+.blog-view h2{
+    font-size: 4rem;
+}
+
+.blog-view span{
+    font-size: 1.5rem;
+}
+
+.blog-view p{
+    font-size: 1.8rem;
+}
+
+.blog-view a{
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+
+.blog-back-link:hover{
+    color: #2f88c7;
+}
+.blog-view img {
+    width: 30%;          /* Adjust based on your layout */
+    height: auto;
+    display: block;
+    object-fit: cover;    /* Ensures the image maintains aspect ratio */
+    min-height: 200px;    /* Set a minimum height for the image block to reserve space */
+}

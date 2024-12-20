@@ -1,12 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .App {
   text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 :root {
-  --bg-color: #1f242d;
-  --second-bg-color: #323946;
+  --bg-color: #0a1224;
+  --second-bg-color: #101a2c;
   --text-color: #fff;
-  --main-color: #0ef;
+  --main-color: rgb(127, 175, 231);
 }
 
 html {
@@ -20,5 +28,19 @@ body {
   color: var(--text-color);
   margin: 0; /* Reset margin */
   padding-top: 80px; /* Padding to avoid overlap with fixed header */
+  background: linear-gradient(270deg, #0b1220, #020f1e);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.main-content {
+  flex: 1;
+}
+footer {
+  margin-top: auto; /* Pushes the footer to the bottom if the content is smaller than the viewport */
+}
